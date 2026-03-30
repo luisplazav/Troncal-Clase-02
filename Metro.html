@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño y visualización de información</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #cc0000;
+      --dark: #333;
+      --mid: #666;
+      --light: #999;
+      --border: #ddd;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Roboto Condensed', Arial, sans-serif;
+    }
+
+    body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
+
+    .wordmark {
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--red);
+      text-decoration: none;
+    }
+    .nav-divider { width: 1px; height: 18px; background: var(--border); }
+    .nav-section {
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 48px 20px 32px;
+    }
+    .kicker {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--dark);
+    }
+
+    /* ARTICLE */
+    article { padding: 28px 0 40px; border-top: 1px solid var(--border); }
+
+    h2 {
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .byline {
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--mid);
+      margin-bottom: 20px;
+    }
+    .byline strong { color: var(--dark); }
+
+    p {
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+
+    /* FIGURE */
+    figure { margin: 28px -100px 24px; }
+    figure img { width: 50%; display: block; margin: 0 auto; border: 1px solid var(--border); }
+    figcaption {
+      font-family: var(--sans);
+      font-size: 12px;
+      color: var(--light);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 20px;
+      text-align: center;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--red);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <p class="kicker">Diseño y visualización de información</p>
+      <h1>London Undergound Map<br>1933</h1>
+    </header>
+
+    <article>
+      <h2>Del caos geográfico a la estructura de interacción: cómo un diagrama técnico de 1933 fundó el lenguaje universal para navegar la complejidad de los datos modernos.
+</h2>
+      <p class="byline">Por <strong>Esperanza Alvarado</strong>, <strong>Fernanda Berríos</strong>, <strong>Luis Plaza</strong> y <strong>Rayen Ramos</strong></p>
+
+      <p>En 1931, el sistema de transporte de Londres enfrentaba una crisis de legibilidad. Intentar representar las líneas del metro sobre la topografía real de la ciudad generaba una saturación visual que impedía la navegación eficiente. El problema no era la ausencia de datos, sino su organización. La respuesta llegó de la mano de Harry Beck, un dibujante de ingeniería eléctrica que, en 1933, implementó una solución radical: la abstracción topológica.</p>
+
+      <figure>
+        <img src="bloque.webp" alt="Harry Beck's London Underground Map 1931">
+        <figcaption>Primer mapa de bolsillo diseñado por  W J Pawsey en 1907</figcaption>
+      </figure>
+	  
+	        <figure>
+        <img src="rojo1931.webp" alt="Primera propuesta de edición de bolsillo rechazado, diseñado por Harry Beck 1931">
+        <figcaption>Primera propuesta de edición de bolsillo rechazado, diseñado por Harry Beck 1931</figcaption>
+      </figure>
+	  
+	  	        <figure>
+        <img src="azul1933.webp" alt="Primera edición de bolsillo aceptada, diseñada por Harry Beck 1933">
+        <figcaption>Primera edición de bolsillo aceptada, diseñada por Harry Beck 1933</figcaption>
+      </figure>
+
+      <p>El diseño de Beck no buscaba reproducir fielmente la ciudad, sino construir una estructura de relaciones. Al priorizar la conectividad sobre la distancia física, Beck respondió a las preguntas fundamentales del usuario sobre quién lo usa, qué representa, dónde ocurre y cuándo se utiliza. Desde la teoría del diseño, esta pieza constituye una Estructura de Interacción. No es un espejo de la realidad, sino un artefacto que media entre el humano y el fenómeno técnico. En términos del modelo DIKW, Beck transformó datos brutos en información útil, permitiendo que el usuario genere conocimiento práctico para habitar la infraestructura. Aquí predomina la información como dato útil y como construcción social, pues el mapa diseña una forma de interpretar el mundo que privilegia la funcionalidad sobre la exactitud.</p>
+	  
+	<p>Bajo la óptica contemporánea de la Ley 19.628, la lógica de este mapa revela una tensión ética. Aunque el diagrama de Beck no expone datos personales de forma explícita, su construcción se basa en flujos de pasajeros que hoy consideraríamos datos de geolocalización o comportamiento. La abstracción de Beck transforma al individuo en un nodo abstracto. Si bien esto facilita la lectura, la reflexión crítica nos advierte que este proceso puede omitir datos sensibles como condiciones de accesibilidad, limitaciones físicas o realidades socioeconómicas de los usuarios. Lo que no se grafica no existe en la interfaz, por lo que toda visualización es un acto político de selección y exclusión de datos.</p>
+
+<p>El modo de visualizar de Beck ha trascendido el papel para convertirse en el estándar de la comunicación óptima con un impacto cuantificable y sistémico. Actualmente, más del noventa por ciento de las redes de transporte complejas a nivel mundial emplean la lógica esquemática de Beck para evitar la saturación cognitiva. Asimismo, la lógica de puntos y conexiones es el cimiento de la arquitectura de microservicios en el Cloud Computing y del diseño de experiencias de usuario, donde la ubicación física del servidor es irrelevante frente a la relación lógica entre los procesos.</p>
+
+<p>Desde la bioinformática hasta el análisis de grafos en redes sociales, la limpieza de Beck se sigue utilizando para navegar sistemas en expansión. El mapa de Londres no solo enseñó a los ingleses a tomar el tren, sino que proyectó el modo en que la humanidad contemporánea habita, organiza y consume la información en la era del Big Data. Un ejemplo claro de este legado vivo es la red del Metro de Santiago, cuya visualización utiliza los mismos principios de Beck para sintetizar una de las redes más extensas de Latinoamérica en una interfaz legible para millones de ciudadanos.</p>
+
+
+	  	        <figure>
+        <img src="metro santiago.webp" alt="Mapa Metro de Santiago 2023">
+        <figcaption>Mapa Metro de Santiago 2023</figcaption>
+      </figure>
+	  
+	  </article>
+	  
+  </div>
+
+  <footer>Diseño y visualización de información</footer>
+
+</body>
+</html>
